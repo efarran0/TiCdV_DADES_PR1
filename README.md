@@ -22,7 +22,7 @@ El dataset ha estat publicat en Zenodo amb DOI [10.5281/zenodo.0000000](https://
 
 ## Instrucciones
 El programa main.py inclou totes les classes i funcions utilitzades en l'arxiu executor.
-Per a generar el dataset cal assignar en l'arxiu executor un llistat de 2 users-agents a elecció pròpia a dins la funció get_top250_movies de main.py.
+Per a generar el dataset cal assignar en l'arxiu executor un llistat de 2 users-agents a elecció pròpia com a paràmetre de la funció get_top250_movies de main.py.
 
 ***
 **Exemple**

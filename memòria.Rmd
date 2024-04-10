@@ -1,0 +1,32 @@
+---
+title: 'X'
+author: 'X&X'
+date: '`r Sys.Date()`'
+output:
+  pdf_document:
+    toc: yes
+    number_sections: yes
+    toc_depth: 3
+header-includes:
+  \usepackage{dcolumn}
+lang: ca
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      message = FALSE,
+                      warning = FALSE)
+```
+\newpage
+
+# Context
+# Descripció dataset
+# Representació gràfica
+# Contigut dataset
+# Propietat
+# Inspiració
+# Llicència
+# Codi font i dataset
+# Recursos

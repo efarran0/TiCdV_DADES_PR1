@@ -26,6 +26,7 @@ Per a generar el dataset cal assignar la url del portal web escollit i un llista
 
 ***
 **Exemple**
+
 from main import collector
 
 url = 'https://www.imdb.com/chart/top/?ref_=nv_mv_250'

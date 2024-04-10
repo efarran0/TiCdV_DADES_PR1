@@ -3,8 +3,8 @@
 Asignatura: M2.851 / Semestre: 0000-0 / Fecha: 00-00-0000
 
 ## Autores
-  * Eric Farran Moreno - (efarran0@uoc.edu)
-  * Jordi Alvarez Pitarque - (jalvarezpit@uoc.edu)
+  * Eric Farran Moreno - [efarran0@uoc.edu](efarran0@uoc.edu)
+  * Jordi Alvarez Pitarque - [jalvarezpit@uoc.edu](jalvarezpit@uoc.edu)
 
 ## Sitio web elegido
 [https://www.example.com](https://www.example.com)

@@ -2,6 +2,7 @@
 import requests
 from bs4 import BeautifulSoup
 
+
 # Es crea la funció que retorna el document 'robots.txt' de la pàgina web
 def get_robots_txt(url):
     if url.endswith('/'):

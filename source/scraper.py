@@ -1,4 +1,4 @@
-# S'importa la classe collector de main i la llibreria os
+# S'importa la funció get_top250_movies de main i la llibreria os
 from main import get_top250_movies
 import os
 

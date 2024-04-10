@@ -1,23 +1,10 @@
-***
-
-_Este repositorio muestra un ejemplo de la estructura que debe seguirse para la entrega de la
-**Práctica 1** de la asignatura **Tipología y Ciclo de Vida de los Datos (M2.851)** del
-Máster universitario de Ciencia de Datos (UOC)._
-
-**IMPORTANTE:**
-
-⚠️ El repositorio de entrega de la práctica debe ser un **repositorio privado**.
-
-⚠️ A modo de ejemplo, se ofrece un documento de la estructura que debe seguir la memoria de la práctica: [`memoria.pdf`](memoria.pdf). Este documento **debe subirse al Aula Canvas y no al repositorio GitHub**.
-***
-
 # Práctica 1 - Tipología y Ciclo de Vida de los Datos
 
 Asignatura: M2.851 / Semestre: 0000-0 / Fecha: 00-00-0000
 
 ## Autores
-  * Nombre Apellidos - [email@uoc.edu](email@uoc.edu)
-  * Nombre Apellidos - [email@uoc.edu](email@uoc.edu)
+  * Eric Farran Moreno - [efarran0@uoc.edu]
+  * Jordi Alvarez Pitarque - [jalvarezpit@uoc.edu]
 
 ## Sitio web elegido
 [https://www.example.com](https://www.example.com)

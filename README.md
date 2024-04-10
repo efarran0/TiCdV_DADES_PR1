@@ -7,7 +7,7 @@ Assignatura: M2.851 / Semestre: 2024-2 / Data: 16-04-2024
   * Jordi Alvarez Pitarque - [jalvarezpit@uoc.edu](jalvarezpit@uoc.edu)
 
 ## Portal web escollit
-[https://www.imdb.com](https://www.imdb.com/)
+[https://www.imdb.com/chart/top/?ref_=nv_mv_250](https://www.imdb.com/chart/top/?ref_=nv_mv_250)
 
 ## Enllaç DOI Zenodo
 El dataset ha estat publicat en Zenodo amb DOI [10.5281/zenodo.0000000](https://doi.org/10.5281/zenodo.0000000).
@@ -15,10 +15,12 @@ El dataset ha estat publicat en Zenodo amb DOI [10.5281/zenodo.0000000](https://
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.0000000.svg)](https://doi.org/10.5281/zenodo.0000000)
 
 ## Descripció del repositori
-  * `/source/main.py`: Archiu principal.
-  * `/source/scraper.py`: Archiu executor.
+  * `/source/main.py`: Arxiu principal.
+  * `/source/scraper.py`: Arxiu executor.
   * `/source/requirements.txt`: Llista de paquets utilitzats (Python 3.11.7).
-  * `/dataset/data.csv`: Dataset en format csv.
+  * `/dataset/data.csv`: Dataset generat en format csv.
 
 ## Instrucciones
-En este apartado se debe describir cómo usar el código generado. Deberá incluir información sobre los posibles parámetros que admita el script y uno o varios ejemplos replicables de su uso. 
+El programa main.py inclou totes les classes utilitzades en l'arxiu executor.
+Per a generar el dataset cal assignar un user_agent a elecció pròpia i executar scraper.py tal que:
+  * url = 'https://www.imdb.com/chart/top/?ref_=nv_mv_250'

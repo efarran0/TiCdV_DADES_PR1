@@ -17,7 +17,7 @@ El dataset ha estat publicat en Zenodo amb DOI [10.5281/zenodo.0000000](https://
 ## Descripció del repositori
   * `/source/main.py`: Archiu principal.
   * `/source/scraper.py`: Archiu executor.
-  * `/source/requirements.txt`: Llista de paquets utilitzats (Python 3.10).
+  * `/source/requirements.txt`: Llista de paquets utilitzats (Python 3.11.7).
   * `/dataset/data.csv`: Dataset en format csv.
 
 ## Instrucciones

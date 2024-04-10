@@ -1,14 +1,17 @@
 # S'importen llibreries request i BeautifulSoup
-import requests
 from bs4 import BeautifulSoup
+import numpy as np
+import pandas as pd
+import requests
+import time
 
 
 # Es crea la funció que retorna el document 'robots.txt' de la pàgina web
-def get_robots_txt(url):
-    if url.endswith('/'):
-        path = url
+def get_robots_txt(page_url):
+    if page_url.endswith('/'):
+        path = page_url
     else:
-        path = url + '/'
+        path = page_url + '/'
     request = requests.get(path + "robots.txt", data=None)
 
     return request.text
@@ -17,15 +20,14 @@ def get_robots_txt(url):
 # Es crea la classe 'url_scrap' per rascar la pàgina principal
 class url_scrap():
     def __init__(self,
-                 url,
                  user_agent):
-        self.url = url
         self.user_agent = user_agent
 
     def get_soup(self,
-                 url,
                  user_agent):
-        response = requests.get(self.url,
+        url = 'https://www.imdb.com/chart/top/?ref_=nv_mv_250'
+
+        response = requests.get(url,
                                 headers={"user-agent": self.user_agent})
 
         # S'obté la sopa
@@ -35,8 +37,7 @@ class url_scrap():
         return soup
 
     def get_movie(self):
-        movie = self.get_soup(self.url,
-                              self.user_agent).find('ul',
+        movie = self.get_soup(self.user_agent).find('ul',
                                                     class_='ipc-metadata-list ipc-metadata-list--dividers-between sc-a1e81754-0 eBRbsI compact-list-view ipc-metadata-list--base').find_all('li',
                                                                                                                                                                                             class_='ipc-metadata-list-summary-item sc-10233bc-0 iherUv cli-parent')
 
@@ -183,3 +184,98 @@ class link_scrap():
             collection_text = 'NA'
 
         return collection_text
+
+
+# Es crea la funció que recopila les dades i retorna un DataFrame
+def get_top250_movies(user_agent_list):
+    # Es comprova que l'extracció de dades és permesa
+    # pel propietàri de la pàgina web
+    page_url = 'https://www.imdb.com/'
+    print(get_robots_txt(page_url))
+
+    # El web scraping aplicat en aquesta pràctica és permès
+
+    user_agent = user_agent_list[0]
+
+    url_instance = url_scrap(user_agent)
+
+    # Es creen les llistes per emmagatzemar dades
+    titles = []
+    genres = []
+    years = []
+    classifications = []
+    durations = []
+    ratings = []
+    reviews = []
+    directors = []
+    budgets = []
+    collections = []
+
+    # Es cerquen les direccions webs a les pel·lícules requerides
+    k = 0
+    for link in url_instance.get_movie_link():
+
+        k += 1
+
+        if k > 125:
+            user_agent = user_agent_list[1]
+
+        link_instance = link_scrap(link,
+                                   user_agent)
+
+        # S'emmagatzemen les dades
+
+        film = link_instance.get_title()
+        print('{} <started>'.format(film))
+
+        titles.append(film)
+        print('{} <1/10>'.format(film))
+        time.sleep(np.random.normal(1, 0.2))
+
+        genres.append(link_instance.get_genre())
+        print('{} <2/10>'.format(film))
+        time.sleep(np.random.normal(1, 0.2))
+
+        years.append(link_instance.get_year())
+        print('{} <3/10>'.format(film))
+        time.sleep(np.random.normal(1, 0.2))
+
+        classifications.append(link_instance.get_classification())
+        print('{} <4/10>'.format(film))
+        time.sleep(np.random.normal(1, 0.2))
+
+        durations.append(link_instance.get_duration())
+        print('{} <5/10>'.format(film))
+        time.sleep(np.random.normal(1, 0.2))
+
+        ratings.append(link_instance.get_rating())
+        print('{} <6/10>'.format(film))
+        time.sleep(np.random.normal(1, 0.2))
+
+        reviews.append(link_instance.get_review())
+        print('{} <7/10>'.format(film))
+        time.sleep(np.random.normal(1, 0.2))
+
+        directors.append(link_instance.get_director())
+        print('{} <8/10>'.format(film))
+        time.sleep(np.random.normal(1, 0.2))
+
+        budgets.append(link_instance.get_budget())
+        print('{} <9/10>'.format(film))
+        time.sleep(np.random.normal(1, 0.2))
+
+        collections.append(link_instance.get_collection())
+        print('{} <finished>\n'.format(film))
+        time.sleep(np.random.normal(2, 0.3))
+
+    # Es construeix el dataframe a partir de les llistes
+    return pd.DataFrame(dict(Title=titles,
+                             Genre=genres,
+                             Year=years,
+                             Classification=classifications,
+                             Duration=durations,
+                             Rating=ratings,
+                             Review=reviews,
+                             Director=directors,
+                             Budget=budgets,
+                             Collection=collections))

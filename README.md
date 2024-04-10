@@ -26,8 +26,7 @@ Per a generar el dataset cal assignar un llistat de 2 users-agents a elecció pr
   * url = 'https://www.imdb.com/chart/top/?ref_=nv_mv_250'
 
 ***
-Exemple
-***
+**Exemple**
 
 url = 'https://www.imdb.com/chart/top/?ref_=nv_mv_250'
 

@@ -27,7 +27,9 @@ Per a generar el dataset cal assignar un llistat de 2 users-agents a elecció pr
 
 ***
 Exemple
+
 url = 'https://www.imdb.com/chart/top/?ref_=nv_mv_250'
+
 user_agent_list = [user_agent_1, user_agent_2]
 
 data = collector(url,

@@ -22,5 +22,13 @@ El dataset ha estat publicat en Zenodo amb DOI [10.5281/zenodo.0000000](https://
 
 ## Instrucciones
 El programa main.py inclou totes les classes utilitzades en l'arxiu executor.
-Per a generar el dataset cal assignar un user_agent a elecció pròpia i executar scraper.py tal que:
+Per a generar el dataset cal assignar un llistat de 2 users-agents a elecció pròpia i executar scraper.py tal que:
   * url = 'https://www.imdb.com/chart/top/?ref_=nv_mv_250'
+
+***
+Exemple
+url = 'https://www.imdb.com/chart/top/?ref_=nv_mv_250'
+user_agent_list = [user_agent_1, user_agent_2]
+
+data = collector(url,
+                 user_agent_list).get_top250_movies()

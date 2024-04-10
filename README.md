@@ -1,6 +1,6 @@
 # Pràctica 1 - Tipologia i Cicle de Vida de les Dades
 
-Assignatura: M2.851 / Semestre: 2024-2 / Fecha: 16-04-2024
+Assignatura: M2.851 / Semestre: 2024-2 / Data: 16-04-2024
 
 ## Autors
   * Eric Farran Moreno - [efarran0@uoc.edu](efarran0@uoc.edu)
@@ -10,7 +10,7 @@ Assignatura: M2.851 / Semestre: 2024-2 / Fecha: 16-04-2024
 [https://www.imdb.com](https://www.imdb.com/)
 
 ## Enllaç DOI Zenodo
-El dataset ha sido publicado en Zenodo con DOI [10.5281/zenodo.0000000](https://doi.org/10.5281/zenodo.0000000).
+El dataset ha estat publicat en Zenodo amb DOI [10.5281/zenodo.0000000](https://doi.org/10.5281/zenodo.0000000).
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.0000000.svg)](https://doi.org/10.5281/zenodo.0000000)
 

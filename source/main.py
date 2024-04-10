@@ -1,4 +1,4 @@
-# S'importen llibreries request i BeautifulSoup
+# S'importen llibreries requerides
 from bs4 import BeautifulSoup
 import numpy as np
 import pandas as pd

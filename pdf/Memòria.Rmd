@@ -44,11 +44,11 @@ kableExtra::kable_styling(
 
 El lloc web seleccionat per a l’estudi de web scraping és el de les 250 pel·lícules top segons IMDb (Acrònim d’Internet Movie Database)[^1]. Es tracta d’una web que conté una base de dades en línia amb informació relacionada amb pel·lícules, sèries i programes de televisió principalment, com el repartiment, els productors, sinopsis, curiositats, valoracions, gènere, o fins i tot opinions de cinèfils i crítics.
 
-Hem decidit aquesta elecció perquè es tracta d’una font confiable i molt reconeguda d’informació de pel·lícules. En concret aquest recurs que presentem és bastant rellevant perquè classifica les 250 pel·lícules més valorades per els usuaris d’IMDb. És important perquè ens proporciona informació sobre les preferències cinematogràfiques dels usuaris.
+Hem decidit aquesta elecció perquè es tracta d’una font confiable i molt reconeguda d’informació de pel·lícules. En concret aquest recurs que presentem és bastant rellevant perquè classifica les 250 pel·lícules més ben valorades pels usuaris d’IMDb. És important perquè ens proporciona informació sobre les preferències cinematogràfiques dels usuaris.
 
 Un altre motiu per fer web scraping sobre IMDb, és que l’API (Application Programming Interface) proporcionada a través de Amazon Data Exchange, és de pagament.
 
-Amb la popularitat actual de les plataformes de streaming és important conèixer quin tipus de contingut prefereix l’audiència. El fet d’analitzar les pel·lícules més valorades, podem obtenir informació per a predir futures tendències de consum dels espectadors.
+Amb la popularitat actual de les plataformes de streaming és important conèixer quin tipus de contingut prefereix l’audiència. Analitzant les pel·lícules més valorades, podem obtenir informació per a predir futures tendències de consum dels espectadors.
 La pregunta que ens podem fer és: Quines característiques comparteixen les pel·lícules més valorades per els usuaris?
 
 [^1]: https://www.imdb.com/chart/top/?ref_=nv_mv_250
@@ -61,7 +61,7 @@ IMDb dataset: Característiques de les 250 pel·lícules més valorades en abril
 
 # Descripció dataset
 
-El conjunt de dades titulat “IMDb Top 250: Característiques de les pel·lícules més valorades en abril 2024”, és una recopilació d’informació detallada de les 250 pel·lícules més valorades d’IMDb en abril 2024. Aquest dataset inclou atributs com el títol, l’any de llançament, la classificació, el gènere o gèneres, la duració, el rating, el nombre les ressenyes, el director o directora, el pressupost i els ingressos per taquillatge totals.
+El conjunt de dades titulat “IMDb Top 250: Característiques de les pel·lícules més valorades en abril 2024”, és una recopilació d’informació detallada de les 250 pel·lícules més ben valorades d’IMDb en abril 2024. Aquest dataset inclou atributs com el títol, l’any de llançament, la classificació, el gènere o gèneres, la duració, el rating, el nombre de ressenyes, el director o directora, el pressupost i els ingressos per taquillatge.
 
 Cada entrada del dataset representa una única pel·lícula de la llista de les 250 millors d’IMDb, proporcionant una visió exhaustiva  de les característiques que la fan tant ben valorades pels espectadors. Aquest conjunt de dades serà una font d’informació confiable de qualsevol persona interessada en l’anàlisi de tendències cinematogràfiques, o simplement per a persones que busquen tresors per veure.
 Destaquem que aquest conjunt de dades s’ha obtingut amb tècniques de web scraping de forma responsable i ètica, respectant les condicions de servei d’IMDb i sense sobrecarregar els seus servidors.

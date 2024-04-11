@@ -53,11 +53,11 @@ La pregunta que ens podem fer és: Quines característiques comparteixen les pel
 
 [^1]: https://www.imdb.com/chart/top/?ref_=nv_mv_250
 
+# Títol
+
+IMDb dataset: Característiques de les 250 pel·lícules més valorades en abril 2024
+
 \newpage
-
-# Representació gràfica
-
-![Flux de dades d'IMDb.](Representació gràfica.png){width=70%}
 
 # Descripció dataset
 
@@ -66,7 +66,10 @@ El conjunt de dades titulat “IMDb Top 250: Característiques de les pel·lícu
 Cada entrada del dataset representa una única pel·lícula de la llista de les 250 millors d’IMDb, proporcionant una visió exhaustiva  de les característiques que la fan tant ben valorades pels espectadors. Aquest conjunt de dades serà una font d’informació confiable de qualsevol persona interessada en l’anàlisi de tendències cinematogràfiques, o simplement per a persones que busquen tresors per veure.
 Destaquem que aquest conjunt de dades s’ha obtingut amb tècniques de web scraping de forma responsable i ètica, respectant les condicions de servei d’IMDb i sense sobrecarregar els seus servidors.
 
-\newpage
+# Representació gràfica
+
+![Flux de dades d'IMDb.](Representació gràfica.png){width=70%}
+
 
 # Contigut dataset
 
@@ -95,7 +98,7 @@ El conjunt de dades proporcionat conté les següents característiques de cadas
 El període de temps al que pertanyen les dades és el moment d’extracció de les dades atès que les 250 millors pel·lícules d’IMDb s’actualitza regularment en funció de les qualificacions dels usuaris.
 En aquest cas, la darrera extracció es realitza en data del 11 d’abril del 2024.
 
-# Propietat
+# Propietari
 
 Encara que IMDb és una companyia d’Amazon, opera com entitat independent amb la seva pròpia junta directiva, per tant, té autoritat sobre les seves pròpies dades. IMDb és reconegut com a font confiable i autoritzada d’informació sobre pel·lícules i sèries. Per exemple, la famosa revista “Fotogramas” especialitzada en cinema fa citacions d’aquesta base de dades en línia en els seus articles.
 
@@ -162,8 +165,6 @@ El programa de recol·lecció de dades web emprat en aquesta pràctica es divide
 
 El procés de recerca es dur a terme mitjançant la llibreria BeautifulSoup de python especificant l’etiqueta que es vol obtenir i a la classe a la que pertany aquesta. No obstant l’anterior, no totes les dades es distingeixen exclusivament per l’etiqueta i la classe. Així doncs, una de les problemàtiques que s’han solventat al programa és la discriminació de dades amb característiques comunes dins el portal web. A més, també s’ha volgut obtenir el llistat d’actors principals que han participat en cada pel·lícula així com el nombre de nominacions als Oscars però, en aquest cas, les dades no s'han pogut extreure.
 
-# Contribucions
-
 ```{r 2, fig.align = 'centrer'}
 kableExtra::kable_styling(
   kableExtra::row_spec(
@@ -178,7 +179,7 @@ kableExtra::kable_styling(
 
 \newpage
 
-# Recursos
+**Referències**
 
 1. Las 250 mejores películas de IMDb.\
 https://www.imdb.com/chart/top/?ref_=nv_mv_250/ \

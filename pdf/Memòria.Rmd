@@ -1,10 +1,10 @@
 ---
-title: 'IMDb Top 250: Característiques de les pel·lícules més valorades en abril 2024'
+title: 'IMDb dataset: Característiques de les 250 pel·lícules més valorades en abril 2024'
 author: 'Eric Farran Moreno i Jordi Alvarez Pitarque'
 date: '`r Sys.Date()`'
 output:
   pdf_document:
-    toc: yes
+    toc: no
     number_sections: yes
     toc_depth: 3
 header-includes:
@@ -15,11 +15,30 @@ editor_options:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,
+knitr::opts_chunk$set(echo = FALSE,
                       message = FALSE,
                       warning = FALSE)
 ```
-\newpage
+
+```{r 1, fig.align = 'centrer'}
+kableExtra::kable_styling(
+  kableExtra::row_spec(
+    kable_input = knitr::kable(
+      data.frame( 'Dades' = c('Autors',
+                              'Portal web escollit',
+                              'Repositori',
+                              'Zenodo',
+                              'Vídeo'),
+                  'Contingut'  = c('Eric Farran Moreno i Jordi Alvarez Pitarque',
+                                   'https://www.imdb.com/chart/top/?ref_=nv_mv_250',
+                                   'https://github.com/efarran0/TiCdV_DADES_PR1',
+                                   'https://zenodo.org/records/10960898',
+                                   'https://drive.google.com/drive/folders/1Ed7G3YkAmBDw_w45jENvpWfCfVnZbtaK')),
+      caption = 'Resum'),
+    row = 0,
+    bold = TRUE),
+  latex_options = 'hold_position')
+```
 
 # Context
 
@@ -34,16 +53,20 @@ La pregunta que ens podem fer és: Quines característiques comparteixen les pel
 
 [^1]: https://www.imdb.com/chart/top/?ref_=nv_mv_250
 
+\newpage
+
 # Representació gràfica
 
-![Flux de dades d'IMDb.](Representació gràfica.png){width=50%}
+![Flux de dades d'IMDb.](Representació gràfica.png){width=70%}
 
 # Descripció dataset
 
-El conjunt de dades titulat “IMDb Top 250: Característiques de les pel·lícules més valorades en abril 2024”, és una recopilació d’informació detallada de les 250 pel·lícules més valorades d’IMDb. Aquest dataset inclou atributs com el títol, l’any de llançament, la classificació, el gènere o gèneres, la duració, el rating d’IMDb, el nombre les ressenyes, el director/a, el pressupost i els ingressos per taquillatge.
+El conjunt de dades titulat “IMDb Top 250: Característiques de les pel·lícules més valorades en abril 2024”, és una recopilació d’informació detallada de les 250 pel·lícules més valorades d’IMDb en abril 2024. Aquest dataset inclou atributs com el títol, l’any de llançament, la classificació, el gènere o gèneres, la duració, el rating, el nombre les ressenyes, el director o directora, el pressupost i els ingressos per taquillatge totals.
 
 Cada entrada del dataset representa una única pel·lícula de la llista de les 250 millors d’IMDb, proporcionant una visió exhaustiva  de les característiques que la fan tant ben valorades pels espectadors. Aquest conjunt de dades serà una font d’informació confiable de qualsevol persona interessada en l’anàlisi de tendències cinematogràfiques, o simplement per a persones que busquen tresors per veure.
 Destaquem que aquest conjunt de dades s’ha obtingut amb tècniques de web scraping de forma responsable i ètica, respectant les condicions de servei d’IMDb i sense sobrecarregar els seus servidors.
+
+\newpage
 
 # Contigut dataset
 
@@ -76,21 +99,18 @@ En aquest cas, la darrera extracció es realitza en data del 11 d’abril del 20
 
 Encara que IMDb és una companyia d’Amazon, opera com entitat independent amb la seva pròpia junta directiva, per tant, té autoritat sobre les seves pròpies dades. IMDb és reconegut com a font confiable i autoritzada d’informació sobre pel·lícules i sèries. Per exemple, la famosa revista “Fotogramas” especialitzada en cinema fa citacions d’aquesta base de dades en línia en els seus articles.
 
-\newpage
-
 A continuació es citen anàlisis anteriors de la mateixa font d’informació:
 
 - Sentiment Classification of IMDB Movie Review Data Using a PyTorch LSTM Network. \
-Es tracta d’un estudi que utilitza les ressenyes de pel·lícules d’IMDb per a predir si la
-ressenya de la pel·lícula te un sentiment positiu o negatiu[^2].
+Es tracta d’un estudi que utilitza les ressenyes de pel·lícules d’IMDb per a predir si la ressenya de la pel·lícula te un sentiment positiu o negatiu[^2].
 
 - Quantitative approaches for evaluating the influence of films using the IMDB data base. \
-Es tracta d’un estudi sobre la influència de certes pel·lícules al llarg de la història del
-cinema en base a les citacions que rep[^3]. 
+Es tracta d’un estudi sobre la influència de certes pel·lícules al llarg de la història del cinema en base a les citacions que rep[^3]. 
 
 - Exploratory data analysis of the IMDb’s movie database from a data scientist perspective. \
-Es tracta d’un anàlisi de les dades d’IMDb utilitzant R amb ggplot2, com indica el títol, per a
-visualitzar les qualificacions i metadades de les pel·lícules de la font d’IMDb[^4].
+Es tracta d’un anàlisi de les dades d’IMDb utilitzant R amb ggplot2, com indica el títol, per a visualitzar les qualificacions i metadades de les pel·lícules de la font d’IMDb[^4].
+
+\newpage
 
 Finalment, els passos que seguim per actuar d’acord amb els principis ètics i legals són els següents:
 
@@ -138,9 +158,23 @@ Aquesta llicència és apropiada pels següents motius:
 
 # Codi font i dataset
 
-El programa de recol·lecció de dades web emprat en aquesta pràctica es divideix a l’hora en dos programes. El primer conté les instruccions requerides per obtenir de manera autònoma les direccions web a les 250 millors pel·lícules valorades en IMDb i tots els camps especificats en l'apartat número 5 de contingut mentre que, el segon programa, executa al primer.
+El programa de recol·lecció de dades web emprat en aquesta pràctica es divideix a l’hora en dos programes. El primer conté les instruccions requerides per obtenir de manera autònoma les direccions web a les 250 millors pel·lícules valorades en IMDb i tots els camps especificats en l'apartat de contingut mentre que, el segon programa, executa al primer.
 
 El procés de recerca es dur a terme mitjançant la llibreria BeautifulSoup de python especificant l’etiqueta que es vol obtenir i a la classe a la que pertany aquesta. No obstant l’anterior, no totes les dades es distingeixen exclusivament per l’etiqueta i la classe. Així doncs, una de les problemàtiques que s’han solventat al programa és la discriminació de dades amb característiques comunes dins el portal web. A més, també s’ha volgut obtenir el llistat d’actors principals que han participat en cada pel·lícula així com el nombre de nominacions als Oscars però, en aquest cas, les dades no s'han pogut extreure.
+
+# Contribucions
+
+```{r 2, fig.align = 'centrer'}
+kableExtra::kable_styling(
+  kableExtra::row_spec(
+    kable_input = knitr::kable(
+      data.frame('Contribucions' = c('Investigació prèvia', 'Redacció de les respostes', 'Desenvolupament del codi', 'Participació al vídeo'),
+                 'Signatura' = c('EFM, JAP', 'EFM, JAP', 'EFM, JAP', 'EFM, JAP')),
+      caption = 'Contribucions'),
+    row = 0,
+    bold = TRUE),
+  latex_options = 'hold_position')
+```
 
 \newpage
 

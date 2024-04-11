@@ -10,9 +10,9 @@ Assignatura: M2.851 / Semestre: 2024-2 / Data: 16-04-2024
 [https://www.imdb.com/chart/top/?ref_=nv_mv_250](https://www.imdb.com/chart/top/?ref_=nv_mv_250)
 
 ## Enllaç DOI Zenodo
-El dataset ha estat publicat en Zenodo amb DOI [10.5281/zenodo.0000000](https://doi.org/10.5281/zenodo.0000000).
+El dataset ha estat publicat en Zenodo amb DOI [10.5281/zenodo.10960898](https://doi.org/10.5281/zenodo.10960898).
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.0000000.svg)](https://doi.org/10.5281/zenodo.0000000)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10960898.svg)](https://doi.org/10.5281/zenodo.10960898)
 
 ## Descripció del repositori
   * `/source/main.py`: Arxiu principal.

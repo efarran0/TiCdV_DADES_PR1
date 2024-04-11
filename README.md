@@ -20,7 +20,7 @@ El dataset ha estat publicat en Zenodo amb DOI [10.5281/zenodo.0000000](https://
   * `/source/requirements.txt`: Llistat de paquets utilitzats (Python 3.11.7).
   * `/dataset/data.csv`: Dataset generat en format csv.
 
-## Instrucciones
+## Instruccions
 El programa main.py inclou totes les classes i funcions utilitzades en l'arxiu executor.
 Per a generar el dataset cal assignar en l'arxiu executor un llistat de 2 users-agents a elecció pròpia com a paràmetre de la funció get_top250_movies de main.py.
 

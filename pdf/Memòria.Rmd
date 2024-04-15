@@ -107,11 +107,17 @@ A continuació es citen anàlisis anteriors de la mateixa font d’informació:
 - Sentiment Classification of IMDB Movie Review Data Using a PyTorch LSTM Network. \
 Es tracta d’un estudi que utilitza les ressenyes de pel·lícules d’IMDb per a predir si la ressenya de la pel·lícula te un sentiment positiu o negatiu[^2].
 
+[^2]: https://visualstudiomagazine.com/articles/2022/03/21/sentiment-classification-imdb.aspx
+
 - Quantitative approaches for evaluating the influence of films using the IMDB data base. \
-Es tracta d’un estudi sobre la influència de certes pel·lícules al llarg de la història del cinema en base a les citacions que rep[^3]. 
+Es tracta d’un estudi sobre la influència de certes pel·lícules al llarg de la història del cinema en base a les citacions que rep[^3].
+
+[^3]: https://www.lluiscodina.com/influence-films-imdb-database/
 
 - Exploratory data analysis of the IMDb’s movie database from a data scientist perspective. \
 Es tracta d’un anàlisi de les dades d’IMDb utilitzant R amb ggplot2, com indica el títol, per a visualitzar les qualificacions i metadades de les pel·lícules de la font d’IMDb[^4].
+
+[^4]: https://minimaxir.com/2018/07/imdb-data-analysis/
 
 \newpage
 
@@ -124,12 +130,6 @@ Finalment, els passos que seguim per actuar d’acord amb els principis ètics i
 **3. Minimització de la càrrega del servidor**: Ens assegurem de no sobrecarregar els servidors d’IMDb fent web scraping de forma responsable, per exemple, afegint retards entre peticions.
 
 **4. Privacitat de les dades personals**: Encara que les dades d’IMDb són públiques, no s’inclou cap informació de caràcter personal identificable en el nostre dataset.
-
-[^2]: https://visualstudiomagazine.com/articles/2022/03/21/sentiment-classification-imdb.aspx
-
-[^3]: https://www.lluiscodina.com/influence-films-imdb-database/
-
-[^4]: https://minimaxir.com/2018/07/imdb-data-analysis/
 
 # Inspiració
 
@@ -159,11 +159,23 @@ Aquesta llicència és apropiada pels següents motius:
 
 **Compartir Igual (SA)**: Permet que altres transformin i elaborin sobre aquesta informació, sempre que es distribueixinels seus treballs sota la mateixa llicència que l'original. Això promou l’intercanvi deconeixements.
 
-# Codi font i dataset
+# Codi font
 
 El programa de recol·lecció de dades web emprat en aquesta pràctica es divideix a l’hora en dos programes. El primer conté les instruccions requerides per obtenir de manera autònoma les direccions web a les 250 millors pel·lícules valorades en IMDb i tots els camps especificats en l'apartat de contingut mentre que, el segon programa, executa al primer.
 
 El procés de recerca es dur a terme mitjançant la llibreria BeautifulSoup de python especificant l’etiqueta que es vol obtenir i a la classe a la que pertany aquesta. No obstant l’anterior, no totes les dades es distingeixen exclusivament per l’etiqueta i la classe. Així doncs, una de les problemàtiques que s’han solventat al programa és la discriminació de dades amb característiques comunes dins el portal web. A més, també s’ha volgut obtenir el llistat d’actors principals que han participat en cada pel·lícula així com el nombre de nominacions als Oscars però, en aquest cas, les dades no s'han pogut extreure.
+
+# Dataset
+
+El dataset es troba disponible a la carpeta /dataset del repositori de github però també pot ser visiat al repositori de dades Zenodo[^5].
+
+[^5]: https://zenodo.org/records/10960898
+
+# Vídeo
+
+El vídeo amb la presentació d'aquesta pràctica es troba disponible al repositori del drive on tots els membres de l'UOC tenen accés de lectura[^6].
+
+[^6]: https://drive.google.com/drive/folders/1Ed7G3YkAmBDw_w45jENvpWfCfVnZbtaK?usp=drive_link
 
 ```{r 2, fig.align = 'centrer'}
 kableExtra::kable_styling(
